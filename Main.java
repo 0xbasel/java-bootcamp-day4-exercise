@@ -80,12 +80,14 @@ public class Main {
         System.out.println("Sum of odds: " + sumOfOdds);
 
         // 6. Write a program that prompts the user to input a positive integer. It should then output a message indicating whether the number is a prime number.
-        System.out.print("Please enter a number to check if it is prime or not: ");
-        int potentialPrime = in.nextInt();
+        int potentialPrime = 0;
+        while (potentialPrime <= 0) {
+            System.out.print("Please enter a positive number to check if it is prime or not: ");
+            potentialPrime = in.nextInt();
+        }
 
-        if (potentialPrime <= 1) {
-            // because 1 is not a prime number
-            System.out.println("Please enter a positive number and above 1");
+        if (potentialPrime == 1) {
+            System.out.println(potentialPrime + " is not a prime number");
         } else {
             boolean isPrime = true;
             for (int i = 2; i <= potentialPrime - 1; i++) {
