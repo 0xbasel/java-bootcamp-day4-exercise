@@ -36,12 +36,16 @@ public class Main {
         System.out.print("Please enter a number: ");
         int number = in.nextInt();
 
-        int factorial = 1;
-        for (int i = number; i >= 1; i--) {
-            factorial *= i;
-        }
+        if (number < 0) {
+            System.out.println("Negative numbers are not allowed.");
+        } else {
+            int factorial = 1;
+            for (int i = number; i >= 1; i--) {
+                factorial *= i;
+            }
 
-        System.out.println(number + "! = " + factorial);
+            System.out.println(number + "! = " + factorial);
+        }
 
         // 4. Two numbers are entered through the keyboard. Write a program to find the value of the number raised to a power of another.
         System.out.print("Enter first number: ");
